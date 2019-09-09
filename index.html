@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de registro con multipasos</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="root">
+        <form action="" class="form-register">
+            <div class="form-register__header">
+                <ul class="progressbar">
+                    <li class="progressbar__option active">Step 1</li>
+                    <li class="progressbar__option">Step 2</li>
+                    <li class="progressbar__option">Step 3</li>
+                    <li class="progressbar__option">Step 4</li>
+                </ul>
+                <h1 class="form-register__title">Register in JoeLord777</h1>
+            </div>
+            <div class="form-register__body">
+                <div class="step active" id="step-1">
+                    <div class="step__header">
+                        <h2 class="step__title">Create Account</h2>
+                    </div>
+                    <div class="step__body">
+                        <input type="email" placeholder="E-mail" class="step__input">
+                        <input type="email" placeholder="Confirm E-mail" class="step__input">
+                        <input type="password" placeholder="Password" class="step__input">
+                        <input type="password" placeholder="Confirm password" class="step__input">
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Next</button>
+                    </div>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step__header">
+                        <h2 class="step__title">Personal information</h2>
+                    </div>
+                    <div class="step__body">
+                        <input type="text" placeholder="Name" class="step__input">
+                        <input type="text" placeholder="Last name" class="step__input">
+                        <input type="tel" placeholder="Phone" class="step__input">
+                        <textarea rows="4" cols="80" placeholder="Address" class="step__input"></textarea>
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">To return</button>
+                        <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Next</button>
+                    </div>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step__header">
+                        <h2 class="step__title">More information ...</h2>
+                    </div>
+                    <div class="step__body">
+                        <input type="text" placeholder="Attribute 1" class="step__input">
+                        <input type="text" placeholder="Attribute 2" class="step__input">
+                        <input type="text" placeholder="Attribute 3" class="step__input">
+                        <input type="text" placeholder="Attribute 4" class="step__input">
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">To return</button>
+                        <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3">Next</button>
+                    </div>
+                </div>
+                <div class="step" id="step-4">
+                    <div class="step__header">
+                        <h2 class="step__title">Final information</h2>
+                    </div>
+                    <div class="step__body">
+                        <input type="text" placeholder="Attribute 5" class="step__input">
+                        <input type="text" placeholder="Attribute 6" class="step__input">
+                        <input type="text" placeholder="Attribute 7" class="step__input">
+                        <input type="text" placeholder="Attribute 8" class="step__input">
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--back" data-to_step="3" data-step="4">To return</button>
+                        <button type="submit" class="step__button">Check in</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
